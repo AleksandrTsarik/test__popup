@@ -1,0 +1,153 @@
+.form__bg
+
+    position: absolute
+    //top: 50%
+    // left: 50%
+    // transform: translate(-50%, 0)
+    width: 30rem
+    margin: 2rem 0
+    z-index: 55
+    p
+        padding: 15px 0
+
+.children
+
+    border: solid 1px red
+    padding: 25px
+    border-radius: 8px
+    background: #3D3C5A
+    color: #ffffff
+
+.box__color__bg
+    position: absolute
+    top: 0
+    right: 0
+    bottom: 0
+    left: 0
+    margin: auto
+    z-index: -1
+.bg_color
+    background-position: center center
+    background-repeat: no-repeat
+    background-size: 100%
+    width: 18rem
+    height: 18rem
+    position: absolute
+    z-index: -1
+
+.blue__bg_top
+    background-image: url('../img/bg__top.svg')
+    // left: -22%
+    // top: -15%
+    margin-left: -8rem
+    margin-top: -8rem
+
+.orchid__bg
+    background-image: url('../img/bg__mid.svg')
+    //right: -25%
+    top: 50%
+    left: 20rem
+    transform: translateY(-50%)
+    //margin-right: -8rem
+    @media screen and ( max-width: 1200px )
+        left: 18rem
+    @media screen and ( max-width: 876px )
+        display: none
+.blue__bg_bottom
+    background-image: url('../img/bg__bott.svg')
+    left: -14%
+    bottom: -14%
+
+.form__bg
+    position: absolute
+    //top: 50%
+    // left: 50%
+    // transform: translate(-50%, 0)
+    width: 30rem
+    margin: 2rem 0
+    z-index: 55
+    display: none
+    p
+        padding: 15px 0
+
+.form
+    background: #3D3C5A
+    border-radius: 0.66rem
+    max-width: 30rem
+    margin: 2rem 0
+    z-index: 55
+
+    &__inner
+        padding: 2.9rem 3.33rem 3.5rem 3.33rem
+        @media screen and ( max-width: 575px )
+            padding: 45px 24px 60px 24px
+.contact
+    padding: 1.6rem 0
+.form__title
+    color: $white
+    font-style: normal
+    font-weight: 900
+    font-size: 2rem
+    line-height: 1.1rem
+
+.time
+    margin: 1.45rem 0 1.9rem 0
+
+.slider
+    margin-top: 1.8rem
+
+.send
+    margin-top: 2.45rem
+    @media screen and ( max-width: 575px )
+        margin-top: 45px
+
+.send__btn
+    margin-right: 1.2rem
+
+.send__inner
+    display: flex
+    align-items: center
+    @media screen and ( max-width: 575px )
+        flex-direction: column
+        align-items: flex-start
+
+.send__text
+    font-weight: 300
+    font-size: 0.6rem
+    line-height: 1rem
+    color: rgba($white , 0.5)
+    letter-spacing: 0.02rem
+    @media screen and ( max-width: 575px )
+        margin-top: 27px
+    a
+        color: rgba($white , 0.5)
+        border-bottom: solid 0.04rem rgba($white , 0.5)
+        transition: 0.3s
+        &:hover
+            color: $white
+
+.form2
+    position: fixed
+    background: #3D3C5A
+    border-radius: 0.66rem
+    z-index: 50
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+    //width: 30rem
+    max-width: 30rem
+    visibility: hidden
+    @media screen and ( max-width: 768px )
+        max-width: 30rem
+    .form__inner
+        width: 100%
+        padding: 2.7rem 2rem 3rem 3.33rem
+        @media screen and ( max-width: 575px )
+            padding: 45px 24px 60px 24px
+        .form__text
+            color: $white
+            font-style: normal
+            font-weight: 300
+            font-size: 1rem
+            line-height: 1.33rem
+            padding: 2.1rem 0 2.5rem 0
