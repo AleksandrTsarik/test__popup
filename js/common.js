@@ -1,6 +1,11 @@
 'use strict';
 
-const textarea = document.querySelector('textarea');
+const 
+  textarea = document.querySelector('textarea'),
+  selectLabel = document.querySelector('.custom-select-label'),
+  selectDrop = document.querySelector('.custom-select-drop'),
+  selectValue = document.querySelector('.custom-select-value');
+  
 
 textarea.addEventListener('keyup', function(){
   if(this.scrollTop > 0){
@@ -22,10 +27,46 @@ function showSliderValue() {
 
 
 document.querySelector('input[type=range]').addEventListener('input', function() {
-    this.setAttribute('value', this.value);
-  });
+  this.setAttribute('value', this.value);
+});
 
+let dropSelect = () => {
+  selectDrop.classList.add('open');  
+  selectValue.classList.add('active'); // класс для стрелки
+}
 
+selectLabel.addEventListener('click', (e) => {
+  const elem = e.target;
+  if(selectValue.textContent == '' || !elem.classList.contains('top')) {
+    elem.classList.add('top');
+  }
+  dropSelect();
+});
+
+selectValue.addEventListener('click', () => {  
+  dropSelect();
+});
+
+document.addEventListener('click', (e) => {  
+  const elem = e.target
+  if(elem.classList.contains('custom-select-drop__option')) {
+    let val = elem.textContent;   
+    selectValue.textContent = val;  
+    // тут надо добавить value в input type hidden    
+  }
+});
+
+document.addEventListener('click', (e) => {
+  const elem = e.target;
+  if(!elem.classList.contains('custom-select-label') && !elem.classList.contains('custom-select-drop') && !elem.classList.contains('custom-select-value')) {
+    if(selectValue.textContent == '') {
+      selectLabel.classList.remove('top');
+      console.log(1)
+    }
+    selectDrop.classList.remove('open');
+    selectValue.classList.remove('active'); // класс для стрелки
+  }
+});
 
 //   const overlay = document.querySelector('.overlay'),   
 // modal = document.querySelector('.modal');
@@ -46,24 +87,28 @@ document.querySelector('input[type=range]').addEventListener('input', function()
 //   }
 // });
 
-let popup = document.querySelector('.form');
-let popup2 = document.querySelector('.form2');
+const popup = document.querySelector('.form');
+const popup2 = document.querySelector('.form2');
 
 
 document.addEventListener('click', (event) => {
-
   const element = event.target;
 
-if(element.classList.contains('btn')) {
+  if(element.classList.contains('btn')) {
 
-  popup2.classList.add('open');
-  popup.classList.add('close');
+    popup2.classList.add('open');
 
-}else if(element.classList.contains('cross')){
+    popup.classList.add('close');
 
-  popup.classList.add('close');
+  }else if(element.classList.contains('cross')){
+
+    popup2.classList.remove('open');
+
+    popup.classList.remove('open');
+
+    popup.classList.add('close');
+
   }
-
 });
 
 

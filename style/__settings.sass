@@ -12,6 +12,8 @@ li
 a
     text-decoration: none
 
+.d-none
+    display: none
 
 .cross
     width: 1.16rem
@@ -92,3 +94,63 @@ a
         opacity: 1
         transition: 0.3s
 
+
+    
+
+.custom-select
+    &-label
+        position: absolute       
+        left: 0
+        bottom: 0.4rem
+        white-space: nowrap
+        overflow: hidden
+        transition: .3s
+        color: rgba(255, 255, 255, 0.5)  
+        z-index: 1
+        &.top
+            bottom: 70%
+            font-size: 0.6rem
+            line-height: 1rem
+            color: rgba(255, 255, 255, 0.5)
+    &-value
+        position: relative
+        min-height: 58px
+        font-weight: 300
+        font-style: light
+        font-size: 1rem
+        line-height: 1.33rem  
+        color: white
+        padding: 0.7rem 0 0.4rem 0
+        &::after
+            content: ''
+            position: absolute
+            right: 0
+            top: 50%
+            width: 10px
+            height: 5px  
+            border: 1px solid #FFFFFF
+            transform: matrix(1, 0, 0, -1, 0, 0)
+    &-drop
+        position: absolute
+        width: 100%
+        max-height: 270px
+        top: 100%
+        margin-top: 3px
+        background-color: #2E2D4E
+        z-index: 1
+        font-size: 24px
+        line-height: 32px
+        color: #FFFFFF
+        opacity: 0
+        visibility: hidden
+        font-weight: 300
+        padding: 16px 16px 0
+        overflow: hidden        
+        &__option
+            height: 32px
+            line-height: 32px
+            margin: 0 0 16px     
+            opacity: 0.5
+            &:hover
+                opacity: 1
+                cursor: pointer   
