@@ -154,9 +154,6 @@ a {
   height: 17px;
   border: solid 1px #E7E7E7;
   margin-left: -27px;
-}
-
-.master-class__input:checked + .master-class__span {
   background: red;
 }
 
@@ -444,9 +441,10 @@ a {
   visibility: hidden;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 575px) {
   .form2 {
     max-width: 30rem;
+    width: auto;
   }
 }
 
@@ -716,6 +714,11 @@ select {
       -ms-flex-align: center;
           align-items: center;
   cursor: pointer;
+  position: relative;
+  width: 190px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .switch__check__box {
@@ -724,24 +727,27 @@ select {
   border: solid 1px #FF7777;
   border-radius: 0.83rem;
   position: absolute;
-  margin: 0 0.5rem;
+  left: 50%;
+  bottom: -2px;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
 }
 
 .switch__check__box::before {
   content: '';
-  width: 20px;
-  height: 20px;
+  width: 0.6rem;
+  height: 0.6rem;
   border-radius: 50%;
   background: #FF7777;
   position: absolute;
-  left: 0.04rem;
+  left: 0.1rem;
   top: 50%;
   -webkit-transform: translate(0, -50%);
           transform: translate(0, -50%);
 }
 
 .switch__check__input:checked + .switch__check__box:before {
-  left: 0.61rem;
+  left: 0.8rem;
   top: 50%;
   -webkit-transform: translate(0, -50%);
           transform: translate(0, -50%);
@@ -756,11 +762,11 @@ select {
   transition: .2s;
 }
 
-.switch__check__input__text + .switch__check__input__text {
-  margin-left: 72px;
+.switch__check__input:not(:checked) + .switch__check__box + .switch__check__input__text {
+  opacity: 1;
 }
 
-.switch__check__input:checked + .switch__check__box:before + .switch__check__input__text {
+.switch__check__input:checked + .switch__check__box + .switch__check__input__text + .switch__check__input__text {
   opacity: 1;
 }
 

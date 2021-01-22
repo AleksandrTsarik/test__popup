@@ -26,17 +26,8 @@
                         <h2 class="form__title">Регистрация</h2>
                         <div class="cross"></div>
                         <div class="contact">
-                            <div class="contact__item">
-                                <!-- <select name="" id="" class="contact-select contact__input" required>
-                                    <option value="" selected disabled></option>
-                                    <option value="2">Москва</option>
-                                    <option value="3">Санкт-петербург</option>
-                                    <option value="4">Екатеринбург</option>
-                                    <option value="5">Тюмень</option>
-                                    <option value="6">Омск</option>
-                                </select>
-                                <label class="contact__label">Город</label> -->
-
+                            <div class="contact__item">                                
+                                <input type="hidden" name="city" value="" />
                                 <div class="custom-select-label">Город</div>
                                 <div class="custom-select-value"></div>
                                 <div class="custom-select-drop">
@@ -61,7 +52,7 @@
                             </div>
     
                             <div class="contact__item">
-                                <textarea  name="" class="contact__input" required></textarea>
+                                <textarea  name="comment" class="contact__input" required></textarea>
                                 <label class="contact__label">Комментарий</label>
                             </div>
                         </div>
@@ -70,25 +61,25 @@
                             <h3 class="subtitle">Мастер-класс</h3>
                             <div class="box__radio">
                                 <label class="radio">
-                                    <input type="radio" class="radio__input" name="radio1" id="radio1">
+                                    <input type="radio" class="radio__input" name="radio1" id="radio1" value="">
                                     <span class="radio__button"><span class="radio__button__inner"></span></span>
                                     <span class="radio__input__text">Экономия на онлайн-шопинге <span>
                                 </label>
     
                                 <label class="radio">
-                                    <input type="radio" class="radio__input" name="radio1" id="radio1">
+                                    <input type="radio" class="radio__input" name="radio1" id="radio1" value="">
                                     <span class="radio__button"><span class="radio__button__inner"></span></span>
                                     <span class="radio__input__text">Мастер-класс<span>
                                 </label>
     
                                 <label class="radio">
-                                    <input type="radio" class="radio__input" name="radio1" id="radio1">
+                                    <input type="radio" class="radio__input" name="radio1" id="radio1" value="">
                                     <span class="radio__button"><span class="radio__button__inner"></span></span>
                                     <span class="radio__input__text">Лучшие площадки<span>
                                 </label>
     
                                 <label class="radio">
-                                    <input type="radio" class="radio__input" name="radio1" id="radio1">
+                                    <input type="radio" class="radio__input" name="radio1" id="radio1" value="">
                                     <span class="radio__button"><span class="radio__button__inner"></span></span>
                                     <span class="radio__input__text">Мастер-класс<span>
                                 </label>
@@ -99,17 +90,17 @@
                             <h3 class="subtitle">Время проведения</h3>
                             <div class="box__checkbox">
                                 <label class="check">
-                                    <input type="checkbox" class="check__input" name="check1" id="check1">
+                                    <input type="checkbox" class="check__input" name="time1" id="check1">
                                     <span class="check__box"></span>
                                     <span class="check__input__text">12:00 – 14:00<span>
                                 </label>
                                 <label class="check">
-                                    <input type="checkbox" class="check__input" name="check2" id="check2">
+                                    <input type="checkbox" class="check__input" name="time2" id="check2">
                                     <span class="check__box"></span>
                                     <span class="check__input__text">15:00 – 17:00<span>
                                 </label>
                                 <label class="check">
-                                    <input type="checkbox" class="check__input" name="check3" id="check3">
+                                    <input type="checkbox" class="check__input" name="time3" id="check3">
                                     <span class="check__box"></span>
                                     <span class="check__input__text">19:00 – 21:00<span>
                                 </label>
@@ -142,7 +133,7 @@
                         <div class="send">
                             <div class="send__inner">
                                 <div class="send__btn">
-                                    <button class="btn btn_disabled" >Отправить</button>
+                                    <button class="btn btn_disabled" disabled>Отправить</button>
                                 </div>
                                 <div class="send__text">
                                     Нажимая на кнопку, вы соглашаетесь 
