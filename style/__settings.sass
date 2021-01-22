@@ -22,6 +22,7 @@ a
     z-index: 55
     cursor: pointer
     right: 1.6rem
+    right: 2.16rem
     top: 1.6rem
     &::after
         content: ''
@@ -102,13 +103,15 @@ a
         padding: 0.7rem 0 0.4rem 0
         &::after
             content: ''
+            background-image: url('../img/arrow_select.svg')
+            background-position: center center
+            background-repeat: no-repeat
+            background-size: cover
             position: absolute
             right: 0
             top: 50%
             width: 0.4rem
             height: 0.2rem  
-            border: 0.04rem solid #FFFFFF
-            transform: matrix(1, 0, 0, -1, 0, 0)
     &-drop
         position: absolute
         width: 100%

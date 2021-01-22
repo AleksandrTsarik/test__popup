@@ -37,7 +37,7 @@ document.querySelector('input[type=range]').addEventListener('input', function()
 
 let dropSelect = () => {
   selectDrop.classList.add('open');  
-  selectValue.classList.add('active'); // класс для стрелки
+  selectValue.classList.add('active'); 
 }
 
 let validateForm = () => { 
@@ -95,7 +95,7 @@ document.addEventListener('click', (e) => {
       selectLabel.classList.remove('top');
     }
     selectDrop.classList.remove('open');
-    selectValue.classList.remove('active'); // класс для стрелки
+    selectValue.classList.remove('active'); 
   }
 });
 
